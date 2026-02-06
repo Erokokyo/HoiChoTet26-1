@@ -16,12 +16,6 @@ AHCTWeaponSpawner::AHCTWeaponSpawner()
 void AHCTWeaponSpawner::BeginPlay()
 {
 	Super::BeginPlay();
-	
-	if (HieuUngKhiLumVuKhi != nullptr)
-	{
-		UNiagaraFunctionLibrary::SpawnSystemAtLocation(this, HieuUngKhiLumVuKhi, GetActorLocation());
-	}
-	
 }
 
 // Called every frame
@@ -33,5 +27,11 @@ void AHCTWeaponSpawner::Tick(float DeltaTime)
 void AHCTWeaponSpawner::OnOverlapBegin(UPrimitiveComponent* OverlappedComponent, AActor* OtherActor,
 	UPrimitiveComponent* OtherComp, int32 OtherBodyIndex, bool bFromSweep, const FHitResult& SweepResult)
 {
+	Super::OnOverlapBegin(OverlappedComponent, OtherActor, OtherComp, OtherBodyIndex, bFromSweep, SweepResult);
+	
+	if (HieuUngKhiLumVuKhi != nullptr)
+	{
+		UNiagaraFunctionLibrary::SpawnSystemAtLocation(this, HieuUngKhiLumVuKhi, GetActorLocation());
+	}
 }
 
