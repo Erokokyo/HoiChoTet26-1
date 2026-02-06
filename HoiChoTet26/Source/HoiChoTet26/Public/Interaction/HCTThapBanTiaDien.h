@@ -30,6 +30,14 @@ protected:
 	// Called when the game starts or when spawned
 	virtual void BeginPlay() override;
 
+	// Called when the actor is constructed, both in editor and at runtime
+	virtual void OnConstruction(const FTransform& Transform) override;
+
+private:
+	// Cached reference to the player pawn
+	UPROPERTY()
+	APawn* CachedPlayerPawn;
+
 public:
 	// Called every frame
 	virtual void Tick(float DeltaTime) override;
