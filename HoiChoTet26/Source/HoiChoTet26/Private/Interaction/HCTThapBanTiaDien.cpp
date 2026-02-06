@@ -55,8 +55,8 @@ void AHCTThapBanTiaDien::BeginPlay()
 void AHCTThapBanTiaDien::Tick(float DeltaTime)
 {
 	Super::Tick(DeltaTime);
-	if (HieuUngBanTiaDien != nullptr && CachedPlayerPawn != nullptr)
-	{
-		HieuUngBanTiaDien->SetVariablePosition(FName("PositionTarget"), CachedPlayerPawn->GetActorLocation());
-	}
+	// if (HieuUngBanTiaDien != nullptr && CachedPlayerPawn != nullptr)
+	// {
+	// 	HieuUngBanTiaDien->SetVariablePosition(FName("PositionTarget"), CachedPlayerPawn->GetActorLocation());
+	// }
 }
