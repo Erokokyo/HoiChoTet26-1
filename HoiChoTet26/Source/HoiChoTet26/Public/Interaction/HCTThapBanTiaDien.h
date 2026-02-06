@@ -21,7 +21,10 @@ public:
 	USceneComponent* SceneRoot;
 
 	UPROPERTY(VisibleAnywhere, BlueprintReadOnly, Category = "VFX")
-	UNiagaraComponent* NiagaraComponent;
+	UNiagaraComponent* HieuUngBanTiaDien;
+	
+	UPROPERTY(VisibleAnywhere, BlueprintReadOnly, Category = "VFX")
+	UNiagaraComponent* HieuUngVungAnhHuong;
 
 protected:
 	// Called when the game starts or when spawned

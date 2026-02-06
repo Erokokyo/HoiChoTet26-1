@@ -14,9 +14,13 @@ AHCTThapBanTiaDien::AHCTThapBanTiaDien()
 	SceneRoot = CreateDefaultSubobject<USceneComponent>(TEXT("SceneRoot"));
 	RootComponent = SceneRoot;
 
-	// Create Niagara component and attach to root
-	NiagaraComponent = CreateDefaultSubobject<UNiagaraComponent>(TEXT("NiagaraComponent"));
-	NiagaraComponent->SetupAttachment(SceneRoot);
+	// Create a Niagara component for Tesla coil effect and attach to root
+	HieuUngBanTiaDien = CreateDefaultSubobject<UNiagaraComponent>(TEXT("Tesla Coil Niagara Component"));
+	HieuUngBanTiaDien->SetupAttachment(SceneRoot);
+	
+	// Create a Niagara component for area effect and attach to root
+	HieuUngVungAnhHuong = CreateDefaultSubobject<UNiagaraComponent>(TEXT("Boundary Effect Niagara Component"));
+	HieuUngVungAnhHuong->SetupAttachment(SceneRoot);
 }
 
 // Called when the game starts or when spawned
