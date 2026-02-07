@@ -17,13 +17,13 @@ public:
 	// Sets default values for this actor's properties
 	AHCTThapBanTiaDien();
 
-	UPROPERTY(VisibleAnywhere, BlueprintReadOnly, Category = "Components")
+	UPROPERTY(VisibleAnywhere, BlueprintReadOnly, Category=Components)
 	USceneComponent* SceneRoot;
 
-	UPROPERTY(VisibleAnywhere, BlueprintReadOnly, Category = "VFX")
+	UPROPERTY(VisibleAnywhere, BlueprintReadOnly, Category=VFX)
 	UNiagaraComponent* HieuUngBanTiaDien;
 	
-	UPROPERTY(VisibleAnywhere, BlueprintReadOnly, Category = "VFX")
+	UPROPERTY(VisibleAnywhere, BlueprintReadOnly, Category=VFX)
 	UNiagaraComponent* HieuUngVungAnhHuong;
 
 protected:
@@ -33,9 +33,8 @@ protected:
 	// Called when the actor is constructed, both in editor and at runtime
 	virtual void OnConstruction(const FTransform& Transform) override;
 
-private:
 	// Cached reference to the player pawn
-	UPROPERTY()
+	UPROPERTY(BlueprintReadOnly, Category=Player)
 	APawn* CachedPlayerPawn;
 
 public:
