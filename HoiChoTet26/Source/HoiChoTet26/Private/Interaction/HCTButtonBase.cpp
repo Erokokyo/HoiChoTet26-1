@@ -3,6 +3,7 @@
 
 #include "Interaction/HCTButtonBase.h"
 #include "Components/BoxComponent.h"
+#include "Components/SceneComponent.h"
 
 
 // Sets default values
@@ -13,7 +14,7 @@ AHCTButtonBase::AHCTButtonBase()
 	
 	// Firstly, create root scene component so that we can still change the box collision relative position
 	SceneRoot = CreateDefaultSubobject<USceneComponent>(TEXT("SceneRoot"));
-	SetRootComponent(SceneRoot); // or RootComponent = SceneRoot;
+	SetRootComponent(SceneRoot);
 	
 	// Create, parent, and configure box collision component
 	CollisionComponent = CreateDefaultSubobject<UBoxComponent>(TEXT("CollisionBox"));
